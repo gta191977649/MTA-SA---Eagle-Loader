@@ -2,7 +2,6 @@ function isStringTrue (str)
 	return (str == 'true')
 end
 
-
 streamTimes = {}
 streamTimeObj = {}
 

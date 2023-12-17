@@ -71,14 +71,17 @@ function loadMapDefinitions ( resourceName,mapDefinitions,last)
 						end
 					end
 					
+					-- deal with model flags
 					if data.flags then
 						getFlags(data)
+						--iprint(data.flags)
+						engineSetModelFlags(modelID,tonumber(data.flags))
 					end
 					
 					idObjectProperties[data.id] = {}
 					
-					idObjectProperties[data.id]['doubleSided'] = data.doubleSided
-					idObjectProperties[data.id]['breakable'] = data.breakable
+					idObjectProperties[data.id]['doubleSided'] = isStringTrue(data.doubleSided)
+					idObjectProperties[data.id]['breakable'] = isStringTrue(data.breakable)
 					
 					-- // Textures
 					

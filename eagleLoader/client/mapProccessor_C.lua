@@ -39,6 +39,7 @@ function loadZone(resourceName,zone)
 	local path = ':'..resourceName..'/zones/'..zone..'/'..zone..'.definition'
 	local zoneDefinitions = xmlLoadFile(path)
 	print(path)
+	print(zoneDefinitions)
 	local sDefintions = xmlNodeGetChildren(zoneDefinitions)
 	local newTable = {}
 	
