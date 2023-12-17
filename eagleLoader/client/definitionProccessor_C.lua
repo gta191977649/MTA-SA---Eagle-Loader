@@ -75,7 +75,7 @@ function loadMapDefinitions ( resourceName,mapDefinitions,last)
 					if data.flags then
 						getFlags(data)
 						--iprint(data.flags)
-						engineSetModelFlags(modelID,tonumber(data.flags))
+						engineSetModelFlags(modelID,tonumber(data.flags),true)
 					end
 					
 					idObjectProperties[data.id] = {}
