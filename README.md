@@ -18,7 +18,13 @@ The following is a list of features this resource provides
 - [ ] MTA map editor (.map format) # Untested
   - [ ] Import
   - [ ] Export
-  
+
+#### Buildings (MTASA 1.6 Feature)
+- [ ] Building placement
+- [ ] Custom ID assignment
+- [ ] LOD placement and assignment
+- [ ] Zone based map support
+
 #### Definitions
 
 - [X] Custom ID assignment
