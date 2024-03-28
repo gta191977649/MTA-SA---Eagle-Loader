@@ -8,6 +8,9 @@ The following is a list of features this resource provides
 - [x] = Supported
 - [ ] = Planned support
 
+#### Imgs (MTASA 1.6 Feature)
+- [ ] Load Imgs Archives
+
 #### Objects
 
 - [X] Object placement
