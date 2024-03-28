@@ -41,9 +41,9 @@ function loadMapDefinitions ( resourceName,mapDefinitions,last)
 
 	Async:setPriority("medium")
 	Async:foreach(mapDefinitions, function(data)
-			
+
 		if not (data.default == 'true') then
-			
+			--iprint(data)
 			local modelID,new = requestModelID(data.id,true)
 
 			if modelID then
@@ -71,17 +71,14 @@ function loadMapDefinitions ( resourceName,mapDefinitions,last)
 						end
 					end
 					
-					-- deal with model flags
 					if data.flags then
 						getFlags(data)
-						--iprint(data.flags)
-						engineSetModelFlags(modelID,tonumber(data.flags),true)
 					end
 					
 					idObjectProperties[data.id] = {}
 					
-					idObjectProperties[data.id]['doubleSided'] = isStringTrue(data.doubleSided)
-					idObjectProperties[data.id]['breakable'] = isStringTrue(data.breakable)
+					idObjectProperties[data.id]['doubleSided'] = data.doubleSided
+					idObjectProperties[data.id]['breakable'] = data.breakable
 					
 					-- // Textures
 					
